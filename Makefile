@@ -4,6 +4,9 @@ VENV = .venv
 PYTHON = $(VENV)/bin/python
 PIP = $(VENV)/bin/pip
 
+$(VENV)/bin/activate:
+	python3 -m venv $(VENV)
+
 shell: $(VENV)/bin/activate
 	@echo "entering venv, type exit to quit"
 	@PATH=$(shell pwd)/$(VENV)/bin:$$PATH bash
@@ -14,13 +17,13 @@ create-structure:
 	touch docs/DOMAIN.md
 	touch src/.gitkeep tests/.gitkeep
 
-install-dep:
-	pip install -r requirements.txt
+install-dep: $(VENV)/bin/activate
+	$(PIP) install -r requirements.txt
 
-install:
-	pip install -e .
+install: $(VENV)/bin/activate
+	$(PIP) install -e .
 
-test-pytest:
-	python3 -m pytest
-
+test-pytest: $(VENV)/bin/activate
+	$(PYTHON) -m pytest
+	
 test: install-dep install test-pytest
