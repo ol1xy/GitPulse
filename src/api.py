@@ -46,13 +46,29 @@ def fetch_basic_repo_info(repo_path: str) -> dict:
                 "has_coc": bool(community_data.get("code_of_conduct"))
             }
 
+        commits_url = f"{url}/commits"
+        commits_response = requests.get(commits_url, headers=HEADERS, params={"per_page": 1})
+
+        last_commit_data = {}
+        if commits_response.status_code == 200:
+            commits_list = commits_response.json()
+            if commits_list:
+                latest = commits_list[0]
+                
+                last_commit_data = {
+                    "message": latest.get("commit", {}).get("message"),
+                    "author": latest.get("commit", {}).get("author", {}).get("name"),
+                    "date": latest.get("commit", {}).get("author", {}).get("date")
+                }
+
         repo_vitals = {
             "name": data.get("full_name"),
             "stars": data.get("stargazers_count"),
             "forks": data.get("forks_count"),
             "open_issues": data.get("open_issues_count"),
             "last_pushed": data.get("pushed_at"),
-            "community": community_files
+            "community": community_files,
+            "latest_commit": last_commit_data
         }
 
         return repo_vitals
