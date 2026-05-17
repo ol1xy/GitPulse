@@ -9,7 +9,7 @@ BASE_URL = "https://api.github.com"
 HEADERS = {
     "Accept": "application/vnd.github+json",
     "Authorization": f"Bearer {TOKEN}",
-    "X-GitHub-Api_Version": "2022-11-28"
+    "X-GitHub-Api-Version": "2022-11-28"
 }
 
 def fetch_basic_repo_info(repo_path: str) -> dict:
