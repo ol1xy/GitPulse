@@ -9,7 +9,7 @@ BASE_URL = "https://api.github.com"
 HEADERS = {
     "Accept": "application/vnd.github+json",
     "Authorization": f"Bearer {TOKEN}",
-    "X-GitHub-Api_Version": "2022-11-28"
+    "X-GitHub-Api-Version": "2022-11-28"
 }
 
 def fetch_basic_repo_info(repo_path: str) -> dict:
@@ -17,7 +17,6 @@ def fetch_basic_repo_info(repo_path: str) -> dict:
     Fetches basic repository vitals: stars, forks, and open issues.
     """
     url = f"{BASE_URL}/repos/{repo_path}"
-
     response = requests.get(url, headers = HEADERS)
 
     if response.status_code == 404:
@@ -27,15 +26,51 @@ def fetch_basic_repo_info(repo_path: str) -> dict:
     
     if response.status_code == 200:
         data = response.json()
+    
+        community_url = f"{url}/community/profile"
+        community_response = requests.get(community_url, headers=HEADERS)
+
+        community_files = {
+            "has_readme": False,
+            "has_license": False,
+            "has_contributing": False,
+            "has_coc": False
+        }
+
+        if community_response.status_code == 200:
+            community_data = community_response.json()
+            community_files = {
+                "has_readme": bool(community_data.get("readme")),
+                "has_license": bool(community_data.get("license")),
+                "has_contributing": bool(community_data.get("contributing")),
+                "has_coc": bool(community_data.get("code_of_conduct"))
+            }
+
+        commits_url = f"{url}/commits"
+        commits_response = requests.get(commits_url, headers=HEADERS, params={"per_page": 1})
+
+        last_commit_data = {}
+        if commits_response.status_code == 200:
+            commits_list = commits_response.json()
+            if commits_list:
+                latest = commits_list[0]
+                
+                last_commit_data = {
+                    "message": latest.get("commit", {}).get("message"),
+                    "author": latest.get("commit", {}).get("author", {}).get("name"),
+                    "date": latest.get("commit", {}).get("author", {}).get("date")
+                }
 
         repo_vitals = {
             "name": data.get("full_name"),
             "stars": data.get("stargazers_count"),
             "forks": data.get("forks_count"),
             "open_issues": data.get("open_issues_count"),
-            "last_pushed": data.get("pushed_at")
+            "last_pushed": data.get("pushed_at"),
+            "community": community_files,
+            "latest_commit": last_commit_data
         }
-        
+
         return repo_vitals
     
     raise Exception(f"Unexpected error: {response.status_code}")
