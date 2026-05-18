@@ -1,5 +1,5 @@
 # GitPulse
-
+![Python Version](https://img.shields.io/badge/python-3.9%2B-blue) ![Tests](https://img.shields.io/badge/tests-25%20passed-success) ![UI](https://img.shields.io/badge/UI-Streamlit-FF4B4B) ![License](https://img.shields.io/badge/license-GPL-green)
 
 **GitPulse** is a web-based FOSS (Free and Open-Source Software) Health Dashboard. It helps junior developers and open-source contributors analyze GitHub repositories to see how active, healthy, and beginner-friendly a community is before they decide to contribute.
 
@@ -8,30 +8,42 @@ Finding a welcoming open-source project can be a pain point for new developers. 
 
 ## Features (Current & Planned)
 - [x] **API Integration:** Secure connection to GitHub REST API using fine-grained tokens.
-- [ ] **Smart URL Parsing:** Automatically extracts `owner/repo` from any valid GitHub link.
-- [ ] **Vitals Check:** Analyzes stars, forks, and the number of open issues.
-- [ ] **Community Standards:** Checks for the existence of `README.md`, `LICENSE`, `CONTRIBUTING.md`, and `CODE_OF_CONDUCT.md`.
-- [ ] **Activity Scoring:** Checks the date of the last commit to identify dormant/abandoned projects.
-- [ ] **Web UI:** Interactive and beautiful frontend built with Streamlit.
+- [x] **Smart URL Parsing:** Automatically extracts `owner/repo` from any valid/messy GitHub link.
+- [x] **Activity Logic:** Calculates days since the last push to identify abandoned projects.
+- [x] **Community Scoring:** A weighted algorithm that checks for `README`, `LICENSE`, `CONTRIBUTING`, and `CODE_OF_CONDUCT`.
+- [x] **Engagement Rate:** Calculates the Forks-to-Stars ratio to distinguish true engagement from "vanity metrics".
+- [x] **Automated Tests:** 100% test coverage for logic and parsing using `pytest` and mock side-effects.
+- [ ] **Web UI:** Interactive frontend built with Streamlit *(in progress)*.
 
 ## Tech Stack
 *   **Backend & Logic:** Python 3, `requests`
 *   **Security:** `python-dotenv` (for API token management)
 *   **Frontend:** [Streamlit](https://streamlit.io/) *(coming soon)*
-*   **Testing:** `pytest` (for URL parsing and API fetching tests)
+*   **Testing:** `pytest`, `unittest`
+
+## How the Scoring Works
+We don't just display raw data. Our backend calculates specific statuses:
+*   **Activity:** Projects inactive for >365 days are marked as `critical` (abandoned).
+*   **Community:** `CONTRIBUTING.md` gives the highest score (30 pts), because it is the most vital file for FOSS newcomers.
+*   **Engagement:** If the Forks-to-Stars ratio is below 5%, it raises a red flag (users bookmark the project, but rarely write code for it). 
 
 ## Project Structure
 ```text
 GitPulse/
-├── docs/                # Documentation and project domain info
-├── src/                 # Main application source code
-├── tests/               # Automated tests (e.g., test_API.py)
-├── .env                 # Secret API tokens (Ignored by Git)
-├── .gitignore           # Files to be ignored by version control
-├── Makefile             # Terminal command shortcuts
-├── README.md            # Project description
-├── requirements.txt     # Python dependencies
-└── setup.py             # Package configuration
+├── src/                 # Main source code (The "Brain" of GitPulse)
+│   ├── api.py           # GitHub REST API interaction logic
+│   ├── logic.py         # Scoring algorithm and health metrics
+│   └── parser.py        # URL validation and string parsing
+├── tests/               # Automated test suite (100% logic coverage)
+│   ├── test_API.py      # Mocks for API responses
+│   ├── test_logic.py    # Unit tests for scoring heuristics
+│   └── test_parser.py   # Parameterized tests for URL parsing
+├── CONTRIBUTING.md      # Guidelines for new contributors
+├── LICENSE              # MIT License
+├── Makefile             # Project automation (make test, make run)
+├── README.md            # Project overview and documentation
+├── requirements.txt     # List of external dependencies
+└── setup.py             # Package installation configuration
 ```
 
 ## Local Setup & Installation
@@ -69,12 +81,10 @@ python tests/test_API.py
 ```
 
 ## Roadmap (Sprint Plan)
-- **day 1:** Setup repo, API fetching, and URL parsing logic + Unit tests.
-- **day 2:** Implement scoring logic, English text generation, and Streamlit Web UI.
 - **day 3:** Deploy to Streamlit Community Cloud and prepare case studies for the pitch.
 
 ## Contributing
-Contributions, issues, and feature requests are welcome! Since this project is actively developed as a university assignment, please reach out via Issues before opening a Pull Request.
+Please read our [CONTRIBUTING.md](docs/CONTRIBUTING.MD) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## License
 This project is licensed under the [GNU License](LICENSE).
