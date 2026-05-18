@@ -1,5 +1,5 @@
 import pytest
-from src.parser import extract_repo_path
+from url_parser import extract_repo_path
 
 @pytest.mark.parametrize("input_url, expected", [
     ("https://github.com/facebook/react", "facebook/react"),
