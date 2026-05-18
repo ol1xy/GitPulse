@@ -89,7 +89,7 @@ python tests/test_API.py
 
 
 ## Contributing
-Please read our [CONTRIBUTING.md](CONTRIBUTING.MD) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read our [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## License
 This project is licensed under the [GNU License](LICENSE).
