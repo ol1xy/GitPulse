@@ -87,8 +87,6 @@ GITHUB_TOKEN=your_fine_grained_token_here
 python tests/test_API.py
 ```
 
-## Roadmap (Sprint Plan)
-- **day 3:** Deploy to Streamlit Community Cloud and prepare case studies for the pitch.
 
 ## Contributing
 Please read our [CONTRIBUTING.md](docs/CONTRIBUTING.MD) for details on our code of conduct, and the process for submitting pull requests to us.
