@@ -5,7 +5,7 @@
 
 ##   Live Demo
 The application is officially live and publicly accessible! Try it now without any installation:
-👉 **[gitpulse.streamlit.app](https://gitpulse.streamlit.app/)**
+**[gitpulse.streamlit.app](https://gitpulse.streamlit.app/)**
 
 *(No GitHub token or setup required for the web version)*
 
