@@ -2,3 +2,4 @@ python-dotenv
 requests
 pytest
 unittest
+streamlit
