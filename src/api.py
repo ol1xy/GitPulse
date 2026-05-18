@@ -39,11 +39,13 @@ def fetch_basic_repo_info(repo_path: str) -> dict:
 
         if community_response.status_code == 200:
             community_data = community_response.json()
+
+            files = community_data.get("files", {})
             community_files = {
-                "has_readme": bool(community_data.get("readme")),
-                "has_license": bool(community_data.get("license")),
-                "has_contributing": bool(community_data.get("contributing")),
-                "has_coc": bool(community_data.get("code_of_conduct"))
+                "has_readme": bool(files.get("readme")),
+                "has_license": bool(files.get("license")),
+                "has_contributing": bool(files.get("contributing")),
+                "has_coc": bool(files.get("code_of_conduct"))
             }
 
         commits_url = f"{url}/commits"
@@ -77,7 +79,7 @@ def fetch_basic_repo_info(repo_path: str) -> dict:
 
 if __name__ == "__main__":
     try:
-        info = fetch_basic_repo_info("facebook/react")
+        info = fetch_basic_repo_info("ol1xy/GitPulse")
         print("Sucesfully fetched data:")
         print(info)
     except Exception as e:
