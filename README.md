@@ -3,6 +3,13 @@
 
 **GitPulse** is a web-based FOSS (Free and Open-Source Software) Health Dashboard. It helps junior developers and open-source contributors analyze GitHub repositories to see how active, healthy, and beginner-friendly a community is before they decide to contribute.
 
+##   Live Demo
+The application is officially live and publicly accessible! Try it now without any installation:
+👉 **[gitpulse.streamlit.app](https://gitpulse.streamlit.app/)**
+
+*(No GitHub token or setup required for the web version)*
+
+
 ## The Problem We Solve
 Finding a welcoming open-source project can be a pain point for new developers. Some repositories look popular but have dead issue trackers, while others lack basic community guidelines. **GitPulse** takes a GitHub URL, fetches live data using the GitHub REST API, and generates a human-readable "Health Report."
 
@@ -13,7 +20,7 @@ Finding a welcoming open-source project can be a pain point for new developers. 
 - [x] **Community Scoring:** A weighted algorithm that checks for `README`, `LICENSE`, `CONTRIBUTING`, and `CODE_OF_CONDUCT`.
 - [x] **Engagement Rate:** Calculates the Forks-to-Stars ratio to distinguish true engagement from "vanity metrics".
 - [x] **Automated Tests:** 100% test coverage for logic and parsing using `pytest` and mock side-effects.
-- [ ] **Web UI:** Interactive frontend built with Streamlit *(in progress)*.
+- [x] **Web UI:** Interactive frontend built with Streamlit *(in progress)*.
 
 ## Tech Stack
 *   **Backend & Logic:** Python 3, `requests`
@@ -43,7 +50,7 @@ GitPulse/
 ├── Makefile             # Project automation (make test, make run)
 ├── README.md            # Project overview and documentation
 ├── requirements.txt     # List of external dependencies
-└── setup.py             # Package installation configuration
+└── app.py               # Main streamlit app
 ```
 
 ## Local Setup & Installation
