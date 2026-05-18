@@ -23,10 +23,12 @@ def test_fetch_basic_repo_info_all_success(mock_get):
     })
     
     resp_community = create_mock_response(200, {
-        "readme": {"url": "..."},
-        "license": {"name": "MIT"},
-        "contributing": {"url": "..."},
-        "code_of_conduct": None 
+        "files": {
+            "readme": {"url": "..."},
+            "license": {"name": "MIT"},
+            "contributing": {"url": "..."},
+            "code_of_conduct": None 
+        }
     })
     
     resp_commits = create_mock_response(200, [

@@ -6,7 +6,8 @@ def calculate_health_score(repo_data: dict) -> dict:
     Returns a dictionary with scores and status flags. 
     """
 
-    last_pushed_str = repo_data.get("last_pushed", "").replace("Z", "+00:00")
+    last_pushed_raw = repo_data.get("last_pushed")
+    last_pushed_str = last_pushed_raw.replace("Z", "+00:00") if last_pushed_raw else ""
 
     is_abandoned = False
     days_inactive = 0
