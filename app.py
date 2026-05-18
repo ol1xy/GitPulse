@@ -2,6 +2,7 @@ import streamlit as st
 import time
 import sys
 import os
+from datetime import datetime, timezone
 
 sys.path.append(os.path.join(os.path.dirname(__file__), "src"))
 from api import fetch_basic_repo_info
@@ -45,4 +46,25 @@ if st.button("Pulse Project", type="primary"):
 
             st.divider()
 
+            st.subheader(f"⏰ Activity:")
+
+            pushed_str = data.get("last_pushed")
+            if pushed_str:
+                pushed_date = datetime.strptime(pushed_str, "%Y-%m-%dT%H:%M:%SZ")
+                st.write(f"**📤 Last Pushed:** `{pushed_date.strftime('%Y-%m-%d %H:%M UTC')}`")
+
+            commit_data = data.get("latest_commit", {})
+            commit_date_str = commit_data.get("date")
             
+            days_ago = 0
+            
+            if commit_date_str:
+                commit_date = datetime.strptime(commit_date_str, "%Y-%m-%dT%H:%M:%SZ")
+                days_ago = (datetime.utcnow() - commit_date).days
+                
+                st.write(f"**💻 Latest Commit:** {days_ago} days ago by *{commit_data.get('author')}*")
+                st.write(f"**📝 Message:**")
+                st.markdown(f"```text\n{commit_data.get('message')}\n```")
+            
+            st.divider()
+
