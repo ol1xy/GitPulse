@@ -43,6 +43,26 @@ def calculate_health_score(repo_data: dict) -> dict:
     if community_score < 50:
         friendly_status = "critical"
 
+    
+    stars = repo_data.get("stars", 0)
+    forks = repo_data.get("forks", 0)
+
+    if stars == 0:
+        engagement_rate = 0.0
+        engagement_status = "critical"
+    
+    else:
+        engagement_rate = round((forks/stars) * 100, 1)
+        
+        if engagement_rate > 10.0:
+            engagement_status = "good"
+        elif engagement_rate >= 5.0:
+            engagement_status = "warning"
+        else: 
+            engagement_status = "critical"
+
+
+
     return {
         "activity": {
             "status": activity_status,
@@ -53,6 +73,11 @@ def calculate_health_score(repo_data: dict) -> dict:
         "community": {
             "score": community_score,
             "status": friendly_status
+        },
+
+        "engagement": {
+            "rate": engagement_rate, 
+            "status": engagement_status
         }
     }
 
