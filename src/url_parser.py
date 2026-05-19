@@ -19,9 +19,12 @@ def extract_repo_path(url: str) -> str:
         parts.pop(0)
 
     if len(parts) >= 2:
-        return f"{parts[0]}/{parts[1]}"
+        owner = parts[0]
+        repo = parts[1].removesuffix(".git")
+        return f"{owner}/{repo}"
     else:
         raise ValueError("Invalid GitHub URL provided")
     
 if __name__ == "__main__":
     print(extract_repo_path("https://github.com/ol1xy/GitPulse"))
+    print(extract_repo_path("https://github.com/snaart/phantom_protocol.git"))
