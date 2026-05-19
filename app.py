@@ -93,11 +93,15 @@ if st.button("Pulse Project", type="primary"):
             
             def check_icon(found):
                 return "✅" if found else "❌"
+            
+            has_licence = comm_files.get('has_license')
+            licence_name = comm_files.get('license_name')
+            licence_display = f" ({licence_name})" if (has_licence and licence_name) else ""
 
             st.markdown(f"""
             **Documentation Checklist:**
             * README {check_icon(comm_files.get('has_readme'))}
-            * LICENSE {check_icon(comm_files.get('has_license'))}
+            * LICENSE {check_icon(has_licence)}{licence_display}
             * CONTRIBUTING.md {check_icon(comm_files.get('has_contributing'))}
             * CODE_OF_CONDUCT.md {check_icon(comm_files.get('has_coc'))}
             """)
