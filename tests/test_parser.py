@@ -8,6 +8,9 @@ from src.parser import extract_repo_path
     ("  https://github.com/facebook/react/issues/123 ", "facebook/react"),
     ("http://github.com/facebook/react", "facebook/react"),
     ("facebook/react", "facebook/react"),
+    ("http://github.com/facebook/react.git", "facebook/react"),
+
+
 ])
 def test_extract_repo_path_valid_inputs(input_url, expected):
     """
@@ -23,6 +26,7 @@ def test_extract_repo_path_valid_inputs(input_url, expected):
     "facebook",
     "",
     "   /   ",
+    "https://github.com/facebook.react"
 ])
 def test_extract_repo_path_invalid_inputs(invalid_url):
     """
