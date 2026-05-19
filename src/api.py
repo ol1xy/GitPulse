@@ -41,9 +41,12 @@ def fetch_basic_repo_info(repo_path: str) -> dict:
             community_data = community_response.json()
 
             files = community_data.get("files", {})
+            license_data = files.get("license")
+
             community_files = {
                 "has_readme": bool(files.get("readme")),
                 "has_license": bool(files.get("license")),
+                "license_name": license_data.get("name") if license_data else None,
                 "has_contributing": bool(files.get("contributing")),
                 "has_coc": bool(files.get("code_of_conduct"))
             }
