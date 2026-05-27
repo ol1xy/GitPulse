@@ -1,0 +1,153 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Страница-1" id="gFn7puzv1PesxBmJbcjq">
+    <mxGraphModel dx="2236" dy="1411" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="PtGXMonKH67XRvR28f9Y-43" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" value="User" vertex="1">
+          <mxGeometry height="830" width="150" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="PtGXMonKH67XRvR28f9Y-44" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="GUI (app.py)" vertex="1">
+          <mxGeometry height="825" width="150" x="303" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="PtGXMonKH67XRvR28f9Y-45" parent="PtGXMonKH67XRvR28f9Y-44" style="points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="" vertex="1">
+          <mxGeometry height="627" width="10" x="70" y="103" as="geometry" />
+        </mxCell>
+        <mxCell id="PtGXMonKH67XRvR28f9Y-46" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="URL Parser (url_parser.py)" vertex="1">
+          <mxGeometry height="825" width="214" x="527" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="PtGXMonKH67XRvR28f9Y-47" parent="PtGXMonKH67XRvR28f9Y-46" style="points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="" vertex="1">
+          <mxGeometry height="48" width="10" x="102" y="151" as="geometry" />
+        </mxCell>
+        <mxCell id="PtGXMonKH67XRvR28f9Y-48" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="GitPulse API (api.py)" vertex="1">
+          <mxGeometry height="825" width="171" x="791" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="PtGXMonKH67XRvR28f9Y-49" parent="PtGXMonKH67XRvR28f9Y-48" style="points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="" vertex="1">
+          <mxGeometry height="240" width="10" x="81" y="247" as="geometry" />
+        </mxCell>
+        <mxCell id="PtGXMonKH67XRvR28f9Y-50" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="External GitHub API" vertex="1">
+          <mxGeometry height="825" width="165" x="1191" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="PtGXMonKH67XRvR28f9Y-51" parent="PtGXMonKH67XRvR28f9Y-50" style="points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="" vertex="1">
+          <mxGeometry height="38" width="10" x="78" y="295" as="geometry" />
+        </mxCell>
+        <mxCell id="PtGXMonKH67XRvR28f9Y-52" parent="PtGXMonKH67XRvR28f9Y-50" style="points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="" vertex="1">
+          <mxGeometry height="38" width="10" x="78" y="391" as="geometry" />
+        </mxCell>
+        <mxCell id="PtGXMonKH67XRvR28f9Y-53" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="Logic Engine (logic.py)" vertex="1">
+          <mxGeometry height="825" width="187" x="1406" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="PtGXMonKH67XRvR28f9Y-54" parent="PtGXMonKH67XRvR28f9Y-53" style="points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="" vertex="1">
+          <mxGeometry height="137" width="10" x="89" y="535" as="geometry" />
+        </mxCell>
+        <mxCell id="PtGXMonKH67XRvR28f9Y-55" edge="1" parent="1" source="PtGXMonKH67XRvR28f9Y-43" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" target="PtGXMonKH67XRvR28f9Y-45" value="Enter GitHub Repository URL">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="245" y="123" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PtGXMonKH67XRvR28f9Y-56" edge="1" parent="1" source="PtGXMonKH67XRvR28f9Y-45" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" target="PtGXMonKH67XRvR28f9Y-47" value="Parse URL">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="517" y="171" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PtGXMonKH67XRvR28f9Y-57" edge="1" parent="1" source="PtGXMonKH67XRvR28f9Y-47" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" target="PtGXMonKH67XRvR28f9Y-45" value="Return &#39;owner&#39; and &#39;repo&#39;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="518" y="219" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PtGXMonKH67XRvR28f9Y-58" edge="1" parent="1" source="PtGXMonKH67XRvR28f9Y-45" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" target="PtGXMonKH67XRvR28f9Y-49" value="Fetch repo data (owner, repo)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="638" y="267" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PtGXMonKH67XRvR28f9Y-59" edge="1" parent="1" source="PtGXMonKH67XRvR28f9Y-49" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" target="PtGXMonKH67XRvR28f9Y-51" value="GET /repos/{owner}/{repo} (with Token)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1086" y="315" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PtGXMonKH67XRvR28f9Y-60" edge="1" parent="1" source="PtGXMonKH67XRvR28f9Y-50" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" target="PtGXMonKH67XRvR28f9Y-49" value="Return Repo Data (JSON)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1087" y="363" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PtGXMonKH67XRvR28f9Y-61" edge="1" parent="1" source="PtGXMonKH67XRvR28f9Y-49" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" target="PtGXMonKH67XRvR28f9Y-52" value="GET commits, files (README, LICENSE, etc.)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1086" y="411" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PtGXMonKH67XRvR28f9Y-62" edge="1" parent="1" source="PtGXMonKH67XRvR28f9Y-50" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" target="PtGXMonKH67XRvR28f9Y-49" value="Return Activity &amp; Community Data">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1087" y="459" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PtGXMonKH67XRvR28f9Y-63" edge="1" parent="1" source="PtGXMonKH67XRvR28f9Y-49" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" target="PtGXMonKH67XRvR28f9Y-45" value="Return aggregated raw data">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="639" y="507" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PtGXMonKH67XRvR28f9Y-64" edge="1" parent="1" source="PtGXMonKH67XRvR28f9Y-45" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" target="PtGXMonKH67XRvR28f9Y-54" value="Calculate Health Metrics (raw data)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="949" y="555" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PtGXMonKH67XRvR28f9Y-65" edge="1" parent="1" source="PtGXMonKH67XRvR28f9Y-54" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" target="PtGXMonKH67XRvR28f9Y-45" value="Return Health Report">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="950" y="692" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PtGXMonKH67XRvR28f9Y-66" edge="1" parent="1" source="PtGXMonKH67XRvR28f9Y-45" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" target="PtGXMonKH67XRvR28f9Y-43" value="Display Dashboard &amp; Metrics">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="246" y="740" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PtGXMonKH67XRvR28f9Y-67" parent="1" style="fillColor=#ffff88;strokeColor=#9E916F;fontColor=light-dark(#333333,#cccccc);" value="Calculate Activity,&#xa;Community Score,&#xa;Engagement Rate" vertex="1">
+          <mxGeometry height="89" width="187" x="1406" y="575" as="geometry" />
+        </mxCell>
+        <mxCell id="PtGXMonKH67XRvR28f9Y-69" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="User" vertex="1">
+          <mxGeometry height="60" width="150" x="20" y="850" as="geometry" />
+        </mxCell>
+        <mxCell id="PtGXMonKH67XRvR28f9Y-70" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="GUI (app.py)" vertex="1">
+          <mxGeometry height="60" width="150" x="300" y="850" as="geometry" />
+        </mxCell>
+        <mxCell id="PtGXMonKH67XRvR28f9Y-71" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="URL Parser (url_parser.py)" vertex="1">
+          <mxGeometry height="60" width="210" x="530" y="845" as="geometry" />
+        </mxCell>
+        <mxCell id="PtGXMonKH67XRvR28f9Y-72" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="GitPulse API (api.py)" vertex="1">
+          <mxGeometry height="60" width="170" x="790" y="845" as="geometry" />
+        </mxCell>
+        <mxCell id="PtGXMonKH67XRvR28f9Y-73" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="External GitHub API" vertex="1">
+          <mxGeometry height="60" width="170" x="1190" y="845" as="geometry" />
+        </mxCell>
+        <UserObject label="Logic Engine (logic.py)" link="Logic Engine (logic.py)" id="PtGXMonKH67XRvR28f9Y-74">
+          <mxCell parent="1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="60" width="200" x="1400" y="845" as="geometry" />
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
