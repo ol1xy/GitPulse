@@ -25,7 +25,7 @@ Finding a welcoming open-source project can be a pain point for new developers. 
 ## Tech Stack
 *   **Backend & Logic:** Python 3, `requests`
 *   **Security:** `python-dotenv` (for API token management)
-*   **Frontend:** [Streamlit](https://streamlit.io/) *(coming soon)*
+*   **Frontend:** [Streamlit](https://streamlit.io/)
 *   **Testing:** `pytest`, `unittest`
 
 ## How the Scoring Works
@@ -45,6 +45,8 @@ GitPulse/
 │   ├── test_API.py      # Mocks for API responses
 │   ├── test_logic.py    # Unit tests for scoring heuristics
 │   └── test_parser.py   # Parameterized tests for URL parsing
+├── docs                 # Project documentation and visual architecture
+│   └── sequence_diagram.drawio  # Visual UML sequence diagram (Draw.io)
 ├── CONTRIBUTING.md      # Guidelines for new contributors
 ├── LICENSE              # MIT License
 ├── Makefile             # Project automation (make test, make run)
@@ -75,18 +77,16 @@ make install
 ```
 
 **4. Set up your Environment Variables**
-Create a `.env` file in the root directory (if it doesn't exist) and add your GitHub Personal Access Token to avoid rate limits:
+Add your GitHub personal access token to the `.env` file in the root directory to avoid rate limits:
 ```text
 GITHUB_TOKEN=your_fine_grained_token_here
 ```
 *(Note: Never commit your `.env` file to GitHub! It is already included in our `.gitignore`).*
 
-**5. Run the application** *(Streamlit integration in progress)*
+**5. Run the application**
 ```bash
-# Currently testing backend API:
-python tests/test_API.py
+streamlit run app.py
 ```
-
 
 ## Contributing
 Please read our [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
