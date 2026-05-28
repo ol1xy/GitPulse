@@ -20,7 +20,7 @@ Finding a welcoming open-source project can be a pain point for new developers. 
 - [x] **Community Scoring:** A weighted algorithm that checks for `README`, `LICENSE`, `CONTRIBUTING`, and `CODE_OF_CONDUCT`.
 - [x] **Engagement Rate:** Calculates the Forks-to-Stars ratio to distinguish true engagement from "vanity metrics".
 - [x] **Automated Tests:** 100% test coverage for logic and parsing using `pytest` and mock side-effects.
-- [x] **Web UI:** Interactive frontend built with Streamlit *(in progress)*.
+- [x] **Web UI:** Interactive frontend built with Streamlit.
 
 ## Tech Stack
 *   **Backend & Logic:** Python 3, `requests`
