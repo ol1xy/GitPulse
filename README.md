@@ -73,20 +73,26 @@ make shell
 **3. Install dependencies**
 ```bash
 make install-dep
-make install
 ```
 
-**4. Set up your Environment Variables**
+**4. Tests
+```bash
+make test-pytest
+```
+
+**5. Set up your Environment Variables**
 Add your GitHub personal access token to the `.env` file in the root directory to avoid rate limits:
 ```text
 GITHUB_TOKEN=your_fine_grained_token_here
 ```
 *(Note: Never commit your `.env` file to GitHub! It is already included in our `.gitignore`).*
 
-**5. Run the application**
+**6. Run the application**
 ```bash
 streamlit run app.py
 ```
+
+
 
 ## Contributing
 Please read our [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
